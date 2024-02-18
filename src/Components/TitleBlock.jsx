@@ -1,15 +1,13 @@
-export default function TitleBlock({ jobName, jobNumber, date }) {
+import JobInfo from "./JobInfo";
+import WeatherInfo from "./WeatherInfo";
+
+export default function TitleBlock() {
 	return (
-		<div className="container row d-flex align-items-baseline">
-			<h1 className="col-8" id="jobName">
-				{jobName}
-			</h1>
-			<span className="col-2" id="jobNumber">
-				{jobNumber}
-			</span>
-			<span className="col-2" id="date">
-				{date}
-			</span>
+		<div>
+			<JobInfo jobName={"Mornington"} jobNumber={224000} date={"04/15/2024"} />
+			<WeatherInfo />
 		</div>
 	);
 }
+
+// ERIS Logbook App
