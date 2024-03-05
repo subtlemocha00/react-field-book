@@ -1,3 +1,13 @@
+import React from "react";
+import constructionProjects from "./constructionProjects";
+
 export default function JobList() {
-	return <>JOBS GO HERE</>;
+	console.log(constructionProjects);
+	return (
+		<ul>
+			{constructionProjects.map((project) => {
+				<li key={project.jobNumber}>{project.projectName}</li>;
+			})}
+		</ul>
+	);
 }

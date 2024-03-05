@@ -7,19 +7,20 @@ import UserHome from "./Components/home-user/UserHome";
 const App = () => {
 	const [currentJob, setCurrentJob] = useState(224001);
 	return (
-		<Router>
-			<Routes>
-				<Route path="/signin" element={<SignInPage />} />
-				<Route path="/" exact element={<SignInPage />} />
-				<Route />
-			</Routes>
-			{/* <TitleBlock
-				jobName={"Mornington Ave Storm Rehab"}
-				jobNumber={currentJob}
-				date={"04/15/2024"}
-			/>
-			<CrewList /> */}
-		</Router>
+		<UserHome />
+		// <Router>
+		// {/* <Routes>
+		// 	<Route path="/signin" element={<SignInPage />} />
+		// 	<Route path="/" exact element={<SignInPage />} />
+		// 	<Route />
+		// </Routes> */}
+		// {/* <TitleBlock
+		// 	jobName={"Mornington Ave Storm Rehab"}
+		// 	jobNumber={currentJob}
+		// 	date={"04/15/2024"}
+		// />
+		// <CrewList /> */}
+		// </Router>
 	);
 };
 

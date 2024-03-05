@@ -19,6 +19,7 @@ export default function SearchBar({ handleSubmit }) {
 				Search Jobs
 			</button>
 			<input
+				id="searchInput"
 				className="form-control"
 				type="text"
 				placeholder="Job Name/Job Number/Date"
