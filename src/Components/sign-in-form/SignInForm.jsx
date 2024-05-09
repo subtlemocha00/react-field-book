@@ -1,21 +1,41 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function SignInForm() {
-	// State to toggle between user and administrator sign-in
-	const [isAdmin, setIsAdmin] = useState(false);
-	const toggleAdmin = () => setIsAdmin(!isAdmin);
+	const [formData, setFormData] = useState({
+		email: '',
+		password: '',
+	});
+	const navigate = useNavigate();
+
+	const handleChange = (e) => {
+		const {name, value} = e.target;
+		setFormData((prevData) => ({
+			...prevData, [name]: value
+		}))
+	};
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		// add verification
+		console.log('changing!')
+		navigate('/jobList');
+	}
 
 	return (
-		<form className="mt-4">
+		<form className="mt-4" onSubmit={handleSubmit}>
 			<div className="mb-3">
 				<label htmlFor="signInEmail" className="form-label">
 					Email address
 				</label>
 				<input
 					type="email"
+					name="email"
 					className="form-control"
 					id="signInEmail"
-					required
+					// required
+					onChange={handleChange}
+					value={formData.email}
 				/>
 			</div>
 			<div className="mb-3">
@@ -24,24 +44,15 @@ export default function SignInForm() {
 				</label>
 				<input
 					type="password"
+					name="password"
 					className="form-control"
 					id="signInPassword"
-					required
+					// required
+					onChange={handleChange}
+					value={formData.password}
 				/>
 			</div>
-			<div className="mb-3 form-check form-switch">
-				<input
-					type="checkbox"
-					className="form-check-input"
-					id="roleToggle"
-					onChange={toggleAdmin}
-					checked={isAdmin}
-				/>
-				<label className="form-check-label" htmlFor="roleToggle">
-					Sign in as Administrator
-				</label>
-			</div>
-			<button type="submit" className="btn btn-primary">
+			<button type="submit" className="btn btn-primary" >
 				Sign In
 			</button>
 		</form>
