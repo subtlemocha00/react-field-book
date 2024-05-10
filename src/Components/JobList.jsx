@@ -8,10 +8,8 @@ export default function JobList() {
 
 	const handleClick = (e) => {
 		e.preventDefault()
-		console.log(e.target)
-		const number = e.target.id;
-		console.log(number)
-		// navigate(`/${number}`)
+		const jobNumber = e.currentTarget.id;
+		navigate(`/jobList/${jobNumber}`)
 	}
 
 	return (
