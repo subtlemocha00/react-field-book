@@ -6,7 +6,8 @@ const jobInfo = [
         workingDaysRemaining: 60,
         startDate: "2023-04-01",
         endDate: "2023-09-30",
-        city: "London"
+        city: "London",
+        work: {surface: true, sanitary: true, storm: true, watermain: true, other: null}
     },
     {
         number: "224002",
@@ -15,7 +16,8 @@ const jobInfo = [
         workingDaysRemaining: 30,
         startDate: "2023-05-15",
         endDate: "2023-08-15",
-        city: "London"
+        city: "London",
+        work: {surface: true, sanitary: true, storm: true, watermain: true, other: null}
     },
     {
         number: "224003",
@@ -24,7 +26,8 @@ const jobInfo = [
         workingDaysRemaining: 100,
         startDate: "2023-03-01",
         endDate: "2023-10-01",
-        city: "Sarnia"
+        city: "Sarnia",
+        work: {surface: true, sanitary: true, storm: true, watermain: true, other: null}
     },
     {
         number: "224004",
@@ -33,7 +36,8 @@ const jobInfo = [
         workingDaysRemaining: 15,
         startDate: "2023-07-01",
         endDate: "2023-08-15",
-        city: "Chatham"
+        city: "Chatham",
+        work: {surface: true, sanitary: true, storm: true, watermain: true, other: null}
     },
     {
         number: "224005",
@@ -42,7 +46,8 @@ const jobInfo = [
         workingDaysRemaining: 90,
         startDate: "2023-01-01",
         endDate: "2023-07-01",
-        city: "Stratford"
+        city: "Stratford",
+        work: {surface: true, sanitary: true, storm: true, watermain: true, other: null}
     },
     {
         number: "224006",
@@ -51,7 +56,8 @@ const jobInfo = [
         workingDaysRemaining: 160,
         startDate: "2023-05-01",
         endDate: "2024-01-01",
-        city: "Lucan"
+        city: "Lucan",
+        work: {surface: true, sanitary: true, storm: true, watermain: true, other: null}
     },
     {
         number: "224007",
@@ -60,7 +66,8 @@ const jobInfo = [
         workingDaysRemaining: 55,
         startDate: "2023-04-15",
         endDate: "2023-10-15",
-        city: "Petrolia"
+        city: "Petrolia",
+        work: {surface: true, sanitary: true, storm: true, watermain: true, other: null}
     },
     {
         number: "224008",
@@ -69,7 +76,8 @@ const jobInfo = [
         workingDaysRemaining: 200,
         startDate: "2023-02-01",
         endDate: "2024-01-01",
-        city: "Chatham"
+        city: "Chatham",
+        work: {surface: true, sanitary: true, storm: true, watermain: true, other: null}
     },
     {
         number: "224009",
@@ -78,7 +86,8 @@ const jobInfo = [
         workingDaysRemaining: 45,
         startDate: "2023-06-01",
         endDate: "2023-09-01",
-        city: "Ingersoll"
+        city: "Ingersoll",
+        work: {surface: true, sanitary: true, storm: true, watermain: false, other: null}
     },
     {
         number: "224010",
@@ -87,7 +96,8 @@ const jobInfo = [
         workingDaysRemaining: 70,
         startDate: "2023-01-15",
         endDate: "2023-10-15",
-        city: "Port Frampton"
+        city: "Port Frampton",
+        work: {surface: true, sanitary: true, storm: false, watermain: true, other: 'parking lot'}
     }
 ];
 

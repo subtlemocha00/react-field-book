@@ -9,7 +9,7 @@ export default function JobList() {
 	const handleClick = (e) => {
 		e.preventDefault()
 		const jobNumber = e.currentTarget.id;
-		navigate(`/jobList/${jobNumber}`)
+		navigate(`/fieldBook/${jobNumber}`)
 	}
 
 	return (
