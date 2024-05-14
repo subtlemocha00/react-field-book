@@ -6,9 +6,9 @@ export default function CrewList() {
 	const [numOperators, setNumOperators] = useState(0);
 	return (
 		<div className="row m-2">
-			<span className="col row align-items-center">
-				<span className="col-auto">Foreman: {numForemen}</span>
-				<div className="btn-group col-4">
+			<span className="col-auto row align-items-center">
+				<span className="col">Foremen: {numForemen}</span>
+				<div className="btn-group col-auto text-center">
 					<button
 						className="btn btn-danger col-6"
 						type="button"
@@ -30,9 +30,9 @@ export default function CrewList() {
 					</button>
 				</div>
 			</span>
-			<span className="col row align-items-center">
-				<span className="col-auto">Labourers: {numLabourers}</span>
-				<div className="btn-group col-4">
+			<span className="col-auto row align-items-center">
+				<span className="col">Labourers: {numLabourers}</span>
+				<div className="btn-group col-auto text-center">
 					<button
 						className="btn btn-danger col-6"
 						type="button"
@@ -54,9 +54,9 @@ export default function CrewList() {
 					</button>
 				</div>
 			</span>
-			<span className="col row align-items-center">
-				<span className="col-auto">Operators: {numOperators}</span>
-				<div className="btn-group col-4">
+			<span className="col-auto row align-items-center">
+				<span className="col">Operators: {numOperators}</span>
+				<div className="btn-group col-auto text-center">
 					<button
 						className="btn btn-danger col-6"
 						type="button" onClick={() => {
