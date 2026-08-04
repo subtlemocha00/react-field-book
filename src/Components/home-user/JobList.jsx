@@ -5,9 +5,9 @@ export default function JobList() {
 	console.log(constructionProjects);
 	return (
 		<ul>
-			{constructionProjects.map((project) => {
-				<li key={project.jobNumber}>{project.projectName}</li>;
-			})}
+			{constructionProjects.map((project) => (
+				<li key={project.jobNumber}>{project.projectName}</li>
+			))}
 		</ul>
 	);
 }
