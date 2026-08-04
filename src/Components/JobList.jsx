@@ -1,6 +1,6 @@
 import { useState } from "react";
 import jobInfo from "./jobInfo";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 export default function JobList() {
 	const [jobs] = useState(jobInfo);
