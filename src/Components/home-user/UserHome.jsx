@@ -5,7 +5,11 @@ import JobList from "./JobList";
 export default function UserHome() {
 	const [isSearched, setIsSearched] = useState(false);
 	// start with all results, numerically ordered
+	/* eslint-disable-next-line no-unused-vars --
+	   Scaffolding for the not-yet-implemented search; see handleSubmit below. */
 	const [searchResults, setSearchResults] = useState(null);
+	/* eslint-disable-next-line no-unused-vars --
+	   Not wired up until search results have somewhere to render. */
 	const toggleIsSearched = () => {
 		setIsSearched(!isSearched);
 	};

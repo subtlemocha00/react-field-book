@@ -1,4 +1,3 @@
-import React from "react";
 import constructionProjects from "./constructionProjects";
 
 export default function JobList() {

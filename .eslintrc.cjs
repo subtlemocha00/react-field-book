@@ -7,7 +7,9 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  // src/assets/js holds vendored third-party bundles (bootstrap, prism, ...),
+  // which are not ours to lint or fix.
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'src/assets/js'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh'],
@@ -16,5 +18,8 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    // This is a plain JSX project with no prop-types dependency and no
+    // TypeScript, so runtime prop validation is not used.
+    'react/prop-types': 'off',
   },
 }

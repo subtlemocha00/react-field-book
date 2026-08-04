@@ -3,7 +3,7 @@ import JobInfo from "./JobInfo";
 import WeatherInfo from "./WeatherInfo";
 
 export default function TitleBlock() {
-	const [weather, setWeather] = useState({
+	const [weather] = useState({
 		conditions: "Sunny",
 		lowC: 15,
 		highC: 32,

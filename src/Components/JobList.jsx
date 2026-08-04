@@ -3,7 +3,7 @@ import jobInfo from "./jobInfo";
 import { useNavigate } from "react-router-dom";
 
 export default function JobList() {
-	const [jobs, setJobs] = useState(jobInfo);
+	const [jobs] = useState(jobInfo);
 	const navigate = useNavigate();
 
 	const handleClick = (e) => {
