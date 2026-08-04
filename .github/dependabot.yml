@@ -1,0 +1,38 @@
+version: 2
+
+# This project is dormant, so the goal here is a small number of boring,
+# mergeable pull requests rather than fast coverage of every new release.
+# Everything is batched: without grouping, one busy week in the toolchain
+# turns into a dozen separate PRs that nobody merges, and the backlog is
+# what makes real security alerts easy to miss.
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 5
+    groups:
+      # Security fixes arrive as a single PR, separate from routine
+      # upgrades, so the one PR that matters is never buried among them.
+      security:
+        applies-to: security-updates
+        patterns:
+          - "*"
+
+      # Runtime dependencies: react, react-dom, react-router, popper.
+      # These can affect what users see, so they stay in their own PR
+      # where the test suite is the thing to check.
+      production:
+        applies-to: version-updates
+        dependency-type: "production"
+        patterns:
+          - "*"
+
+      # Build and test tooling: vite, vitest, eslint, testing-library,
+      # jsdom. Never shipped to a browser, so a red CI run is the only
+      # real review needed.
+      development:
+        applies-to: version-updates
+        dependency-type: "development"
+        patterns:
+          - "*"
